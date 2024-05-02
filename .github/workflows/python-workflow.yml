@@ -13,6 +13,12 @@ jobs:
       with:
         python-version: 3.8
 
+    - name: Download requirements.txt file     
+      uses: actions/download-artifact@v4
+      with:
+        name: Upload 
+        path: requirements.txt
+        
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
